@@ -1,0 +1,65 @@
+// Breakpoints
+$xl: 1200px
+$ip: 1024px
+$lg: 992px
+$md: 768px
+$sm: 576px
+$xs: $sm - 1px
+$margin: 24px
+
+=media-xl($direction: one)
+  @if ($direction == up or $direction == one)
+    @media screen and (min-width: $xl + $margin * 2)
+      @content
+  @else if ($direction == down)
+    @media screen and (max-width: $xl + $margin * 2)
+      @content
+
+=media-ip($direction: one)
+  @if ($direction == up or $direction == one)
+    @media screen and (min-width: $ip + $margin * 2)
+      @content
+  @else if ($direction == down)
+    @media screen and (max-width: $ip + $margin * 2)
+      @content
+
+=media-lg($direction: one)
+  @if ($direction == one)
+    @media screen and (min-width: $lg + $margin * 2) and (max-width: $xl + $margin * 2)
+      @content
+  @else if ($direction == up)
+    @media screen and (min-width: $lg + $margin * 2)
+      @content
+  @else if ($direction == down)
+    @media screen and (max-width: $xl + $margin * 2)
+      @content
+
+=media-md($direction: one)
+  @if ($direction == one)
+    @media screen and (min-width: $md + $margin * 2) and (max-width: $lg + $margin * 2)
+      @content
+  @else if ($direction == up)
+    @media screen and (min-width: $md + $margin * 2)
+      @content
+  @else if ($direction == down)
+    @media screen and (max-width: $lg + $margin * 2)
+      @content
+
+=media-sm($direction: one)
+  @if ($direction == one)
+    @media screen and (min-width: $sm + $margin * 2) and (max-width: $md + $margin * 2)
+      @content
+  @else if ($direction == up)
+    @media screen and (min-width: $sm + $margin * 2)
+      @content
+  @else if ($direction == down)
+    @media screen and (max-width: $md + $margin * 2)
+      @content
+
+=media-xs($direction: one)
+  @if ($direction == up)
+    @media screen and (min-width: $xs + $margin * 2)
+      @content
+  @else if ($direction == down or $direction == one)
+    @media screen and (max-width: $xs + $margin * 2)
+      @content

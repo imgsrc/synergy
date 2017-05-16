@@ -1,0 +1,95 @@
+@import vars
+
+*::-webkit-input-placeholder
+  color: rgba($white, .4)
+  opacity: 1
+
+*:-moz-placeholder
+  color: rgba($white, .4)
+  opacity: 1
+
+*::-moz-placeholder
+  color: rgba($white, .4)
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: rgba($white, .4)
+  opacity: 1
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder
+  color: transparent !important
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder
+  color: transparent !important
+
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder
+  color: transparent !important
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  color: $color
+  font-family: $default-font
+  overflow-x: hidden
+
+header, section
+  max-width: 1920px
+
+
+.responsive-img
+  display: block
+  max-width: 100%
+  height: auto
+
+h1, h2, h3, h4, h5, h6
+  font-family: "Open Sans SemiBold", sans-serif
+  font-weight: 500
+
+h1
+  font-family: "Open Sans Bold", sans-serif
+  font-weight: 600
+  font-size: 110px
+  line-height: 1.2
+
+
+h2
+  font-family: "Open Sans Bold", sans-serif
+  font-size: 34px
+
+h3, h4
+  font-family: "Open Sans SemiBold", sans-serif
+  text-transform: uppercase
+
+h3
+  font-size: 18px
+
+h4
+  font-size: 16px
+
+a
+  text-decoration: underline
+  color: $green
+  outline: none !important
+  &:hover
+    text-decoration: none
+
+strong
+  font-family: "Open Sans SemiBold", sans-serif
+  font-weight: bold
+
+
+//Попап-форма обратной связи (кастомизация формы, которая внизу)
+.form-callback
+  position: relative
+  overflow: hidden
+  +mt(.3s)
+  max-width: 320px
+  margin: auto
+  box-shadow: rgba(0, 0, 0, .3) 0 0 20px
+  .contact-form-head
+    h4
+      color: #fff
