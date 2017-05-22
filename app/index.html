@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-  
   <meta charset="utf-8">
-  
-  <title>Заголовок</title>
+  <title>Synergy Lectorium</title>
   <meta name="description" content="">
-  
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
   <meta property="og:image" content="path/to/image.jpg">
-  
   <link rel="stylesheet" href="css/main.min.css">
-
 </head>
 
 <body>
+
 <header class="main-head">
   <div class="wrap">
     <div class="top-line">
@@ -38,22 +32,215 @@
         <p><img class="icon" src="./img/icons/metro.png" alt="metro">
           <strong>Семеновская</strong><br><span>Москва, Измайловский Вал, дом 2, корпус 1</span></p>
       </div><!-- ./top-contacts -->
+    </div><!-- ./top-line -->
       
       <div class="header__content">
         <div class="content__text">
           <div class="content__date">
             <p class="number">10</p>
-            <p class="month">ноября</p>
-            <p class="time">в 19:00</p>
+            <div class="date__subject">
+              <p class="month">ноября</p>
+              <p class="time">в 19:00</p>
+            </div><!-- ./date__subject -->
           </div><!-- ./content__date -->
+          <p class="text__description">Бесплатная лекция<br> и онлайн-трансляция</p>
+          <div class="header__title">
+            <h1>Бхригу<br>Йога</h1>
+            <p>Вдохновение<br> на перемены</p>
+            <a data-fancybox href="https://www.youtube.com/watch?v=nDnamSM3Z3s" class="youtube">
+              <img src="./img/icons/play.png" alt="play">
+            </a>
+          </div><!-- ./header__title -->
         </div><!-- ./content__text -->
-        
-      </div><!-- ./header__content -->
+  
+        <div class="content__form">
+          <form action="" class="form">
+            <div class="form__header">
+              <h3>Записаться</h3>
+              <p>на практическую лекцию</p>
+            </div><!-- ./header-form -->
+      
+            <input type="text" placeholder="Введите ваше имя" required>
+            <input type="tel" placeholder="Введите ваш телефон">
+            <input type="email" placeholder="Введите ваш email" required>
+      
+            <div class="radio">
+              <input type="radio" checked name="participation" id="one" value="live"/>
+              <label for="one"><img src="./img/icons/hat.png" alt="hat"> Живое <br>участие</label>
+              <input type="radio" name="participation" id="two" value="online"/>
+              <label for="two"><img src="./img/icons/hat.png" alt="hat"> Участие <br>онлайн</label>
+            </div><!-- ./radio -->
+      
+            <div class="compl">
+              <input type="checkbox" id="compl" checked="checked">
+              <span class="chckbx"><img src="./img/icons/check.png" alt="check"></span>
+              <label for="compl" class="compl__label">Согласен получать новости<br> о ЗВЕЗДНЫХ лекциях и курсах</label>
+            </div><!-- ./compl -->
+      
+            <button class="btn btn_lg">Отправить заявку</button>
+      
+            <div class="text_bottom">
+              <p>Количество мест ограничено: 200</p>
+            </div><!-- ./text_bottom -->
     
-    </div><!-- ./top-line -->
+          </form><!-- ./content__form -->
+    
+          <div class="header__social">
+            <p>Рекомендовать друзьям</p>
+            <ul class="social-list">
+              <li class="social-item">
+                <a href="#"><img src="./img/icons/vk.png" alt="vk"></a>
+              </li>
+              <li class="social-item">
+                <a href="#"><img src="./img/icons/fb.png" alt="fb"></a>
+              </li>
+              <li class="social-item">
+                <a href="#"><img src="./img/icons/gpl.png" alt="google+"></a>
+              </li>
+              <li class="social-item">
+                <a href="#"><img src="./img/icons/tw.png" alt="twitter"></a>
+              </li>
+              <li class="social-item">
+                <a href="#"><img src="./img/icons/ok.png" alt="odnoklassniki"></a>
+              </li>
+            </ul>
+          </div><!-- ./header__social -->
+        </div><!-- ./content__form -->
+      </div><!-- ./header__content -->
   </div><!-- ./wrap -->
 </header><!-- ./main-head -->
 
+<section class="s-about">
+  <div class="s-about__left">
+    <img src="./img/sect_bg.jpg" alt="alt" class="s-about__image">
+  </div><!-- ./s-about__left -->
+  
+  <div class="s-about__right">
+    <div class="s-about__content">
+      <h2>Лекция для вас, <br>если вы:</h2>
+      <ul class="s-about__list">
+        <li class="s-about__item">
+          <div class="img-wrap">
+            <img src="./img/icons/man.svg" alt="Alt" class="s-about__img img-svg">
+          </div><!-- ./img-wrap -->
+          <p class="s-about__text">Увлекаетесь <br>йогой</p>
+        </li>
+        <li class="s-about__item">
+          <div class="img-wrap">
+            <img src="./img/icons/hand.svg" alt="Alt" class="s-about__img img-svg">
+          </div><!-- ./img-wrap -->
+          <p class="s-about__text">Интересуетесь <br>культурно-философским <br>наследием Индии</p>
+        </li>
+        <li class="s-about__item">
+          <div class="img-wrap">
+            <img src="./img/icons/lotos.svg" alt="Alt" class="s-about__img img-svg">
+          </div><!-- ./img-wrap -->
+          <p class="s-about__text">Хотите узнать новые <br>принципы работы <br>с телом и умом</p>
+        </li>
+      </ul>
+    </div><!-- ./s-about__content -->
+  </div><!-- ./s-about__right -->
+</section><!-- ./s-about -->
+
+<section class="s-intensive">
+  <!--<div class="wrap">-->
+  <div class="content">
+    <div class="people-img">
+      <img src="./img/people.png" alt="people">
+    </div><!-- ./people-img -->
+    
+    <div class="content__text">
+      <h2>Трёхдневный интенсив</h2>
+      <h3>Лечение и профилактика психосоматических и эндокринных заболеваний методами Бхригу йоги</h3>
+      <p>Вы познакомитесь с особенностями методов и получите пошаговый алгоритм достижения физического и психического
+        благополучия.</p>
+      
+      <ul class="date-list">
+        <li class="date-item">
+          <span class="number">11</span>
+          <div class="date">
+            <strong class="month">ноября</strong>
+            <p class="time">19:00-21:00</p>
+          </div><!-- ./date -->
+        </li><!-- ./date-item -->
+        
+        <li class="date-item">
+          <span class="number">12</span>
+          <div class="date">
+            <strong class="month">ноября</strong>
+            <p class="time">11:00-17:30</p>
+          </div><!-- ./date -->
+        </li><!-- ./date-item -->
+        
+        <li class="date-item">
+          <span class="number">13</span>
+          <div class="date">
+            <strong class="month">ноября</strong>
+            <p class="time">11:00-17:30</p>
+          </div><!-- ./date -->
+        </li><!-- ./date-item -->
+      </ul><!-- ./date-list -->
+      
+      <div class="bottom">
+        <a data-fancybox data-src="#hidden" href="javascript:;" class="btn">Узнать больше</a>
+        <div class="addition">
+          <p>Вы можете приобрести билет на 1, 2 или 3 дня.</p>
+          <p>Запись и дополнительная информация<br> по телефону <strong>+7 999 768 36 38</strong></p>
+        </div><!-- ./addition -->
+      </div><!-- ./bottom -->
+    </div><!-- ./content__text -->
+  </div><!--  ./content -->
+  <!--</div>&lt;!&ndash; ./wrap &ndash;&gt;-->
+</section><!-- ./s-intensive -->
+
+<footer class="main-foot">
+  <div class="wrap">
+    <div class="footer-content">
+      <div class="copy">
+        <p>&copy; 2016 Synergy Lectorium</p>
+      </div><!-- ./copy -->
+      
+      <div class="privacy">
+        <a href="#">Политика конфиденциальности</a>
+      </div><!-- ./privacy -->
+    </div><!-- ./footer-content -->
+  </div><!-- ./wrap -->
+</footer><!-- ./main-foot -->
+
+<div id="hidden">
+  <div class="modal-form">
+    <form action="" class="form form_modal">
+      <div class="form__header">
+        <h3>Записаться</h3>
+        <p>на практическую лекцию</p>
+      </div><!-- ./header-form -->
+      
+      <input type="text" placeholder="Введите ваше имя" required>
+      <input type="tel" placeholder="Введите ваш телефон">
+      <input type="email" placeholder="Введите ваш email" required>
+      
+      <div class="radio">
+        <input type="radio" checked name="participation" id="one" value="live"/>
+        <label for="one"><img src="./img/icons/hat.png" alt="hat"> Живое <br>участие</label>
+        <input type="radio" name="participation" id="two" value="online"/>
+        <label for="two"><img src="./img/icons/hat.png" alt="hat"> Участие <br>онлайн</label>
+      </div><!-- ./radio -->
+      
+      <div class="compl">
+        <input type="checkbox" id="compl" checked="checked">
+        <span class="chckbx"><img src="./img/icons/check.png" alt="check"></span>
+        <label for="compl" class="compl__label">Согласен получать новости<br> о ЗВЕЗДНЫХ лекциях и курсах</label>
+      </div><!-- ./compl -->
+      
+      <button class="btn btn_lg">Отправить заявку</button>
+      
+      <div class="text_bottom">
+        <p>Количество мест ограничено: 200</p>
+      </div><!-- ./text_bottom -->
+    
+    </form><!-- ./content__form -->
+  </div><!-- ./modal-form -->
+</div><!-- ./hidden -->
 
 <script src="js/scripts.min.js"></script>
 

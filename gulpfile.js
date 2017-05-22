@@ -12,7 +12,6 @@ var gulp = require('gulp'),
     cssnano = require('cssnano'),
     autoprefixer = require('autoprefixer'),
     pxtorem = require('postcss-pxtorem'),
-    toRem = require('2rem'),
 
     del = require('del'),
     imagemin = require('gulp-imagemin'),
@@ -24,13 +23,12 @@ var gulp = require('gulp'),
     smart = require("smart-grid"),
     notify = require("gulp-notify");
 
-// gulp.task('smart', function () {
-//     dest: 'app/sass/precss',
-//     outputStyle: 'sass',
-//     filename: '_smart-grid',
-// });
 
 // Скрипты проекта
+gulp.task('smartgrid', function () {
+
+});
+
 gulp.task('scripts', function () {
   return gulp.src([
     'node_modules/jquery/dist/jquery.js',
@@ -59,20 +57,16 @@ gulp.task('postcss', function () {
     pxtorem({
       rootValue: 16,
       unitPrecision: 5,
-      propList: ['font', 'font-size', 'line-height', 'letter-spacing'],
+      propList: ['font', 'font-size', 'line-height'],
       selectorBlackList: ['body', 'html'],
       replace: true,
       mediaQuery: false,
       minPixelValue: 6
     }),
-    toRem({
-      base: 16,
-      mini: 6
-    }),
     cssnano(),
     fonts()
   ]);
-  return gulp.src('app/sass/**/*.sass')
+  return gulp.src('app/sass/main.sass')
       .pipe(sourcemaps.init())
       .pipe(sass().on("error", notify.onError()))
       .pipe(rename({suffix: '.min', prefix: ''}))
@@ -155,7 +149,7 @@ gulp.task('imagemin', function () {
       .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('build', ['removedist', 'generate-favicon', 'inject-favicon-markups', 'imagemin', 'postcss', 'scripts'], function () {
+gulp.task('build', ['removedist', 'imagemin', 'postcss', 'scripts'], function () {
 
   var buildFiles = gulp.src([
     'app/*.html',

@@ -8,7 +8,8 @@ $break_lg: 1024px
 $break_md: 992px
 $break_sm: 768px
 $break_xs: 375px
-$break_xxs: 320px
+$break_xxs: 360px
+$break_xxxs: 320px
 
 =reset()
     body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,input,textarea,p,blockquote,th,td
@@ -31,11 +32,7 @@ $break_xxs: 320px
     
     caption,th
         text-align: left
-    
-    h1,h2,h3,h4,h5,h6
-        font-size: 100%
-        font-weight: normal
-    
+
     sup
         vertical-align: text-top
     
@@ -85,13 +82,18 @@ $break_xxs: 320px
     
 
     @media screen and (max-width: $break_xs)
-        padding-left: 15px
-        padding-right: 15px
+        padding-left: 12px
+        padding-right: 12px
     
 
     @media screen and (max-width: $break_xxs)
-        padding-left: 15px
-        padding-right: 15px
+        padding-left: 10px
+        padding-right: 10px
+    
+
+    @media screen and (max-width: $break_xxxs)
+        padding-left: 10px
+        padding-right: 10px
     
 
 =row-flex()
@@ -1453,6 +1455,209 @@ $break_xxs: 320px
 
 =xxs-block()
     @media screen and (max-width: $break_xxs)
+        @content
+    
+
+=col-xxxs-1()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(5.555555555555555% - #{$offset})}
+    
+
+=col-xxxs-2()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(11.11111111111111% - #{$offset})}
+    
+
+=col-xxxs-3()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(16.666666666666664% - #{$offset})}
+    
+
+=col-xxxs-4()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(22.22222222222222% - #{$offset})}
+    
+
+=col-xxxs-5()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(27.77777777777778% - #{$offset})}
+    
+
+=col-xxxs-6()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(33.33333333333333% - #{$offset})}
+    
+
+=col-xxxs-7()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(38.888888888888886% - #{$offset})}
+    
+
+=col-xxxs-8()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(44.44444444444444% - #{$offset})}
+    
+
+=col-xxxs-9()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(50% - #{$offset})}
+    
+
+=col-xxxs-10()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(55.55555555555556% - #{$offset})}
+    
+
+=col-xxxs-11()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(61.11111111111111% - #{$offset})}
+    
+
+=col-xxxs-12()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(66.66666666666666% - #{$offset})}
+    
+
+=col-xxxs-13()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(72.22222222222221% - #{$offset})}
+    
+
+=col-xxxs-14()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(77.77777777777777% - #{$offset})}
+    
+
+=col-xxxs-15()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(83.33333333333333% - #{$offset})}
+    
+
+=col-xxxs-16()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(88.88888888888889% - #{$offset})}
+    
+
+=col-xxxs-17()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(94.44444444444444% - #{$offset})}
+    
+
+=col-xxxs-18()
+    @media screen and (max-width: $break_xxxs)
+        width: #{calc(100% - #{$offset})}
+    
+
+=offset-xxxs($n)
+    @media screen and (max-width: $break_xxxs)
+        $value: $atom * $n
+        margin-left: #{calc(#{$value} + #{$offset_one_side})}
+        margin-right: #{calc(#{$value} + #{$offset_one_side})}
+    
+
+=offset-left-xxxs($n)
+    @media screen and (max-width: $break_xxxs)
+        $value: $atom * $n
+        margin-left: #{calc(#{$value} + #{$offset_one_side})}
+    
+
+=offset-right-xxxs($n)
+    @media screen and (max-width: $break_xxxs)
+        $value: $atom * $n
+        margin-right: #{calc(#{$value} + #{$offset_one_side})}
+    
+
+=offset-padding-xxxs($n)
+    @media screen and (max-width: $break_xxxs)
+        $value: $atom * $n
+        padding-left: #{calc(#{$value} + #{$offset_one_side})}
+        padding-right: #{calc(#{$value} + #{$offset_one_side})}
+    
+
+=offset-left-padding-xxxs($n)
+    @media screen and (max-width: $break_xxxs)
+        $value: $atom * $n
+        padding-left: #{calc(#{$value} + #{$offset_one_side})}
+    
+
+=offset-right-padding-xxxs($n)
+    @media screen and (max-width: $break_xxxs)
+        $value: $atom * $n
+        padding-right: #{calc(#{$value} + #{$offset_one_side})}
+    
+
+=justify-content-xxxs($value)
+    @media screen and (max-width: $break_xxxs)
+        justify-content: $value
+    
+
+=align-items-xxxs($value)
+    @media screen and (max-width: $break_xxxs)
+        align-items: $value
+    
+
+=align-content-xxxs($value)
+    @media screen and (max-width: $break_xxxs)
+        align-content: $value
+    
+
+=align-self-xxxs($value)
+    @media screen and (max-width: $break_xxxs)
+        align-self: $value
+    
+
+=order-xxxs($value)
+    @media screen and (max-width: $break_xxxs)
+        order: $value
+    
+
+=flex-xxxs($value)
+    @media screen and (max-width: $break_xxxs)
+        flex: $value
+    
+
+=flex-grow-xxxs($value)
+    @media screen and (max-width: $break_xxxs)
+        flex-grow: $value
+    
+
+=flex-shrink-xxxs($value)
+    @media screen and (max-width: $break_xxxs)
+        flex-shrink: $value
+    
+
+=flex-basis-xxxs($value)
+    @media screen and (max-width: $break_xxxs)
+        flex-basis: $value
+    
+
+=flex-direction-xxxs($value)
+    @media screen and (max-width: $break_xxxs)
+        flex-direction: $value
+    
+
+=flex-wrap-xxxs($value)
+    @media screen and (max-width: $break_xxxs)
+        flex-wrap: $value
+    
+
+=flex-flow-xxxs($value)
+    @media screen and (max-width: $break_xxxs)
+        flex-flow: $value
+    
+
+=float-xxxs($value)
+    @media screen and (max-width: $break_xxxs)
+        float: $value
+    
+
+=xxxs($name, $value)
+    @media screen and (max-width: $break_xxxs)
+        #{$name}: $value
+    
+
+=xxxs-block()
+    @media screen and (max-width: $break_xxxs)
         @content
     
 

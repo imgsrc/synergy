@@ -12,26 +12,48 @@
   .top-line
     +row-flex()
     padding: 40px 0
+    +xxs-block()
+      padding: 25px 0 10px
     +justify-content(space-between)
+    +xs(justify-content, center)
     p
       margin: 0
       color: $green
     .logo
       +col()
       +col-4()
+      +col-lg-6()
+      +col-xs-10()
+      margin-left: 60px
+      +xs-block()
+        margin-left: -30px
       p
         line-height: 1
         font-size: 12px
         text-transform: uppercase
         position: relative
         top: -67px
-        left: 215px
+        right: -210px
+        +md(right, -200px)
+        +xs-block()
+          top: -55px
+          right: -155px
+          font-size: 10px
+        +xxs-block()
+          top: -50px
+          right: -135px
     .clrfx
       +col()
-      +col-7()
+      +col-6()
+      +col-lg-1()
     .top-contacts
       +col()
       +col-7()
+      +col-lg-8()
+      +col-xs-16()
+      +xs-block()
+        width: 100%
+        text-align: center
       p
         line-height: 1.4
         font-family: "Open Sans SemiBold", sans-serif
@@ -45,6 +67,11 @@
       .contacts-mobile
         +row-flex
         flex-wrap: nowrap
+        +sm(flex-wrap, wrap)
+        +xs-block()
+          width: 100%
+          text-align: center
+          justify-content: center
         margin-bottom: 23px
         margin-left: 2px
         p
@@ -53,12 +80,420 @@
 
 .header__content
   +row-flex()
+  text-transform: uppercase
   justify-content: space-between
+  +lg(justify-content, space-around)
+  +sm(justify-content, center)
   .content
     &__text
       +col()
+      +col-7()
+      +col-sm-12()
+      .text__description
+        font-size: 20px
+        font-family: "Open Sans Regular", sans-serif
+        margin-left: 60px
+        color: $green
+        +sm-block()
+          text-align: center
+          margin-left: 0
+        +xxs(font-size, 18px)
+      .header__title
+        +sm(text-align, center)
+        margin-top: 40px
+        color: $color
+        h1
+          font-family: "Open Sans Bold", sans-serif
+          font-weight: 600
+          font-size: 110px
+          +lg(font-size, 80px)
+          +sm(font-size, 104px)
+          +xs(font-size, 50px)
+          +xxs(font-size, 48px)
+          line-height: 1
+        p
+          font-size: 44px
+          +xs(font-size, 28px)
+          +xxs(font-size, 22px)
+          line-height: 1
+        .youtube
+          display: block
+          margin: 25px 0 0 90px
+          +sm-block()
+            margin: 25px
+          img
+            +sm(width, 90px)
+            +xs(width, 70px)
     &__date
+      position: relative
+      margin-left: 60px
+      +xs(margin-left, 0)
+      +sm(margin-left, 140px)
+      color: $green
       .number
         font-size: 83px
-      .month, .time
-        float: right
+        font-family: "Open Sans Bold", sans-serif
+        font-weight: 600
+      .date__subject
+        position: absolute
+        bottom: 20px
+        left: 95px
+        line-height: 1.15
+        .month
+          font-size: 32px
+          font-family: "Open Sans Bold", sans-serif
+          font-weight: 600
+        .time
+          font-size: 24px
+          font-family: "Open Sans Regular", sans-serif
+
+.content__form
+  +col()
+  +col-7
+  +col-sm-10()
+  +col-xs-16()
+.form
+  text-transform: uppercase
+  background-color: rgba(44, 76, 101, .4)
+  color: $white
+  padding: 40px 55px
+  +lg-block()
+    padding: 30px 35px
+  &__header
+    text-align: center
+    margin-bottom: 30px
+    +lg(margin-bottom, 20px)
+    h3
+      font-size: 41px
+      +lg(font-size, 32px)
+      +xxs(font-size, 28px)
+    p
+      font-size: 14px
+      letter-spacing: 3px
+  input
+    display: block
+    width: 100%
+    margin-bottom: 17px
+    padding: 20px
+    +lg(padding, 10px)
+    box-sizing: border-box
+  .radio
+    margin-top: 22px
+    padding: 3px
+    border: 1px solid $white
+    border-radius: 30px
+    box-sizing: border-box
+    width: 100%
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-around
+    label
+      cursor: pointer
+      font-size: 12px
+      line-height: 1
+      padding: 10px 10px 10px 0
+      width: 50%
+      border-radius: 30px
+      +mt(.3s)
+      +xs-block()
+        padding: 6px 6px 6px 0
+        font-size: 10px
+      +xxs-block()
+        padding: 7px 4px 4px 0
+        font-size: 8px
+      img
+        float: left
+        visibility: hidden
+        padding: 0 10px
+        +xs-block()
+          padding: 0 6px
+    input[type="radio"]
+      display: none
+      margin: 0
+      padding: 0
+      &:checked + label
+        background-color: $white
+        color: #839fb1
+        img
+          visibility: visible
+  .btn
+    width: 100%
+    margin-top: 24px
+  .text_bottom
+    margin-top: 16px
+    width: 100%
+    text-align: center
+    font-size: 14px
+
+.compl
+  margin-top: 28px
+  input[type="checkbox"]
+    display: none
+    &:checked + span
+      img
+        visibility: visible
+  .chckbx
+    position: relative
+    cursor: pointer
+    top: 2px
+    left: 50px
+    +lg(left, 15px)
+    +sm(left, 40px)
+    +xs(left, 15px)
+    +xxs(left, -5px)
+    display: inline-block
+    float: left
+    outline: 1px solid $white
+    outline-offset: 2px
+    background-color: $white
+    height: 30px
+    width: 30px
+    +xs-block()
+      height: 25px
+      width: 25px
+    +xs-block()
+      height: 20px
+      width: 20px
+      top: 4px
+    img
+      visibility: hidden
+  label
+    display: block
+    width: 100%
+    text-align: center
+    cursor: pointer
+    font-size: 12px
+    +xs(font-size, 10px)
+
+.header__social
+  text-align: center
+  margin-top: 7px
+  p
+    font-size: 14px
+    color: $blue
+  .social-list
+    text-align: center
+    margin-top: 8px
+    +sm(margin-bottom, 25px)
+    .social-item
+      display: inline-block
+      &:not(:last-child)
+        margin-right: 10px
+
+.s-about
+  display: flex
+  flex-wrap: nowrap
+  min-height: 60vh
+  &__left
+    width: 50%
+    +sm(display, none)
+  &__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__right
+    position: relative
+    background: url("../img/sect_bg_mirror.jpg") no-repeat top right
+    background-size: cover
+    width: 50%
+    color: $white
+    +sm-block()
+      width: 100%
+    &::before
+      position: absolute
+      display: block
+      content: ''
+      width: 100%
+      height: 100%
+      top: 0
+      right: 0
+      z-index: 1
+      background-color: rgba(#98abba, .9)
+  &__content
+    position: relative
+    z-index: 20
+    margin: 6.5% 5%
+    +sm-block()
+      text-align: center
+      margin: 0
+    h2
+      margin-bottom: 36px
+      +sm(margin-top, 25px)
+  &__item
+    display: flex
+    width: 100%
+    margin-bottom: 20px
+    align-items: center
+    margin-left: 10px
+    &:hover
+      .s-about__img
+        transform: scale(1.1)
+        path
+          fill: $accent !important
+      .img-wrap
+        border: 3px solid $accent
+    +sm-block()
+      text-align: center
+      flex-direction: column
+      align-items: center
+  .img-wrap
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 118px
+    height: 118px
+    border: 3px solid $white
+    border-radius: 50%
+    +mt(.3s)
+    +sm(margin-bottom, 15px)
+    +lg-block()
+      width: 100px
+      height: 100px
+  &__img
+    display: block
+    width: 65%
+    height: 65%
+    +mt(.5s)
+  &__text
+    font-size: 24px
+    margin-left: 40px
+    +lg(font-size, 20px)
+    +sm-block()
+      margin: 0
+      font-size: 24px
+    +xxs(font-size, 20px)
+
+.s-intensive
+  min-height: 50vh
+  background: linear-gradient(to right, #dfdbe6 0%,#dfdbe6 35%,#f3ebf5 35%,#f3ebf5 100%)
+  +sm(background, #f3ebf5)
+  .content
+    position: relative
+    +row-flex()
+    .people-img
+      +col()
+      +sm(display, none)
+      position: absolute
+      bottom: -30px
+      left: 21%
+      +xl(left, 15%)
+      +lg(left, 10%)
+    .content__text
+      +col()
+      +col-8()
+      +col-lg-14()
+      +col-sm-17()
+      padding: 4% 0 2% 0
+      margin-left: 38%
+      +sm(margin-left, 5%)
+      +xs(text-align, center)
+      h3
+        margin: 16px 0 38px
+        text-transform: none
+      p
+        font-size: 18px
+      .date-list
+        border-top: 1px solid $green
+        padding-top: 23px
+        margin: 34px 0 48px
+        width: 90%
+        color: $green
+        +xs-block()
+          text-align: left
+          margin-left: 90px
+        +xxxs(margin-left, 65px)
+      .date-item
+        display: inline-block
+        &:not(:last-child)
+          margin-right: 70px
+        +xs-block()
+          display: block
+          margin-bottom: 20px
+        .number
+          font-size: 63px
+          +lg(font-size, 50px)
+          font-family: "Open Sans Bold", sans-serif
+          font-weight: 600
+          float: left
+        .date
+          display: inline-block
+          position: relative
+          top: 4px
+          left: 5px
+          .month
+            font-size: 23px
+            +lg(font-size, 20px)
+            font-family: "Open Sans Bold", sans-serif
+            font-weight: 600
+          .time
+            font-size: 24px
+            +lg(font-size, 18px)
+      .bottom
+        +row-flex()
+        flex-wrap: nowrap
+        +xs-block()
+          flex-wrap: wrap
+          justify-content: center
+        .btn
+          +xs-block()
+            width: auto
+            margin-bottom: 30px
+        .addition
+          +col()
+          +col-10()
+          +col-lg-13()
+          +col-xs-13()
+          margin-left: 50px
+          +xs(margin, auto)
+          p
+            font-size: 16px
+          +lg-block()
+            margin-left: 40px
+
+.main-foot
+  padding: 35px 0
+  background-color: $color
+  color: $white
+  +xs-block()
+    padding: 20px 0
+  .wrap
+    width: 100%
+  .footer-content
+    +row-flex()
+    justify-content: space-between
+    align-content: center
+    +lg(justify-content, space-around)
+    .copy
+      +col()
+      +col-8()
+      +col-xs-13()
+      +xs(margin-bottom, 10px)
+      font-size: 18px
+    .privacy
+      +col()
+      +col-4()
+      +col-lg-6()
+      +col-sm-8()
+      +col-xs-13()
+      +col-xxxs-15()
+      a
+        color: $white
+        font-size: 16px
+
+.modal-form
+  +row-flex()
+  margin-left: -10px
+  margin-right: -10px
+  justify-content: center
+  align-items: center
+  .form_modal
+    +col()
+    +col-18
+
+.fancybox-slide > *
+  padding: 0
+.fancybox-slide
+  .compl
+    .chckbx
+      left: 20px
+      +lg(left, 10px)

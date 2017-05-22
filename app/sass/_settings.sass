@@ -1,23 +1,26 @@
 @import vars
 
 *::-webkit-input-placeholder
-  color: rgba($white, .4)
-  opacity: 1
+  color: #839fb1
+  font-size: 18px
+  +xs(font-size, 16px)
 
 *:-moz-placeholder
-  color: rgba($white, .4)
-  opacity: 1
+  color: #839fb1
+  font-size: 18px
+  +xs(font-size, 16px)
 
 *::-moz-placeholder
-  color: rgba($white, .4)
-  opacity: 1
+  color: #839fb1
+  font-size: 18px
+  +xs(font-size, 16px)
 
 *:-ms-input-placeholder
-  color: rgba($white, .4)
-  opacity: 1
+  color: #839fb1
+  font-size: 18px
+  +xs(font-size, 16px)
 
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder
+input:focus::-webkit-input-placeholder
   color: transparent !important
 
 input:focus::-moz-placeholder,
@@ -35,10 +38,32 @@ body
   color: $color
   font-family: $default-font
   overflow-x: hidden
+  background: #fff
 
-header, section
+header, section, footer
+  position: relative
   max-width: 1920px
-
+  margin-left: auto
+  margin-right: auto
+  &::after
+    position: absolute
+    content: ""
+    top: 0
+    margin-left: -10px
+    background: linear-gradient(to left, #999 0%, #fff 100%)
+    display: block
+    height: 100%
+    width: 10px
+  &::before
+    position: absolute
+    content: ""
+    top: 0
+    right: 0
+    margin-right: -10px
+    background: linear-gradient(to right, #999 0%, #fff 100%)
+    display: block
+    height: 100%
+    width: 10px
 
 .responsive-img
   display: block
@@ -49,26 +74,22 @@ h1, h2, h3, h4, h5, h6
   font-family: "Open Sans SemiBold", sans-serif
   font-weight: 500
 
-h1
-  font-family: "Open Sans Bold", sans-serif
-  font-weight: 600
-  font-size: 110px
-  line-height: 1.2
-
-
 h2
   font-family: "Open Sans Bold", sans-serif
-  font-size: 34px
+  font-size: 48px
+  +lg(font-size, 42px)
+  +xxs(font-size, 36px)
 
 h3, h4
   font-family: "Open Sans SemiBold", sans-serif
   text-transform: uppercase
 
 h3
-  font-size: 18px
+  font-size: 28px
+  +xxxs(font-size, 20px)
 
 h4
-  font-size: 16px
+  font-size: 19px
 
 a
   text-decoration: underline
@@ -78,18 +99,35 @@ a
     text-decoration: none
 
 strong
-  font-family: "Open Sans SemiBold", sans-serif
-  font-weight: bold
+  font-family: "Open Sans Bold", sans-serif
+  font-weight: 600 !important
 
+.btn
+  display: inline-block
+  padding: 20px 35px
+  color: $color
+  text-decoration: none
+  background-color: transparent
+  border: 1px solid $color
+  font-size: 18px
+  text-transform: uppercase
+  text-align: center
+  box-sizing: border-box
+  cursor: pointer
+  +lg-block()
+    font-size: 16px
+    padding: 20px 35px
+  +sm-block()
+    padding: 20px 25px
+    font-size: 14px
+  +xs-block()
+    font-size: 12px
+    padding: 15px 35px
+  &_lg
+    background-color: $color
+    color: $white
+    padding: 25px 50px
 
-//Попап-форма обратной связи (кастомизация формы, которая внизу)
-.form-callback
-  position: relative
-  overflow: hidden
-  +mt(.3s)
-  max-width: 320px
-  margin: auto
-  box-shadow: rgba(0, 0, 0, .3) 0 0 20px
-  .contact-form-head
-    h4
-      color: #fff
+#hidden
+  display: none
+  overflow-x: hidden
